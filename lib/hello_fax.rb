@@ -17,7 +17,8 @@ module HelloFax
     end
 
     def send_fax(to, *file)
-      self.class.post("/Accounts/#{@guid}/Transmissions", :query => { :To => to, :file => file })
+      z=puts *file
+      self.class.post("/Accounts/#{@guid}/Transmissions", :query => { :To => to, :file => z })
     end
 
     def account_details
