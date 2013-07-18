@@ -16,7 +16,7 @@ module HelloFax
       @guid = guid
     end
 
-    def send_fax(to, file)
+    def send_fax(to, file*)
       self.class.post("/Accounts/#{@guid}/Transmissions", :query => { :To => to, :file => file })
     end
 
