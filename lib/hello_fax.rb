@@ -6,6 +6,8 @@ module HelloFax
 
     include ::HTTMultiParty
 
+    disable_rails_query_string_format
+
     base_uri "https://www.hellofax.com/apiapp.php/v1/"
     headers 'User-Agent' => "hello_fax gem #{VERSION}"
 
